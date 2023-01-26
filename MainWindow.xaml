@@ -1,0 +1,15 @@
+﻿<Window x:Class="Editor_WPF6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Editor_WPF6" xmlns:zoople="clr-namespace:Zoople;assembly=HTMLEditor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <DockPanel LastChildFill="true">
+        <WindowsFormsHost HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <zoople:HTMLEditControl x:Name="htmlEditor" Dock="Fill"></zoople:HTMLEditControl>
+        </WindowsFormsHost>
+    </DockPanel>
+</Window>
