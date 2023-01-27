@@ -24,11 +24,8 @@ namespace Editor_WPF6
         {
             InitializeComponent();
 
-            this.htmlEditor.CSSText = "body {font-family: Arial}";
-            this.htmlEditor.DocumentHTML = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis, ipsum id vestibulum cursus, " +
-                "felis lectus tristique mi, dictum bibendum justo ligula sollicitudin quam. Nullam vitae mauris ligula.</p><p>" +
-                "Phasellus in euismod tellus. Cras et turpis id tortor facilisis euismod vel at nibh. Nulla mattis consequat leo in efficitur." +
-                " Proin eget arcu ullamcorper, interdum metus vel, placerat lacus</p>";
+            this.htmlEditor.CSSText = css;
+            this.htmlEditor.DocumentHTML = "<P>1)&nbsp;&nbsp;Jegliches Fernbleiben von der Arbeit muss vorher der/dem zuständigen Vorgesetzten gemeldet werden. Ist die Meldung nicht möglich, so ist jedenfalls die/der jeweilige Vorgesetzte unverzüglich zu benachrichtigen.</P><P>Genehmigungspflichtige Abwesenheiten (z.B. Urlaub, Zeitausgleich in der Kernzeit) müssen jedenfalls vorher von der/m zuständigen Vorgesetzten genehmigt werden.</P><P /><P>2)&nbsp;&nbsp;Ist ein/e Angestellte/r durch Krankheit länger als drei Tage verhindert ihren/seinen Dienst zu versehen, so hat sie/er außerdem ohne besondere Aufforderung eine ärztliche Bestätigung beizubringen. Diese Bestätigung kann auch bei kürzerer Krankheitsdauer verlangt werden.</P><P /><P>3)&nbsp;&nbsp;Alle Arbeitsunfälle im Sinne des ASVG sind ohne Verzug dem Personalbüro zu melden.</P><P /><P>4)&nbsp;&nbsp;Bei einer durch Unfall oder Krankheit verursachten Arbeitsunfähigkeit werden der/m Angestellten die vollen Gehaltsbezüge für folgende Zeiträume fortgezahlt:</P><TABLE><COLGROUP><COL WIDTH=\"400\" /><COL WIDTH=\"150\" /><COL WIDTH=\"150\" /></COLGROUP><TR><TD><P>Dienstzeit in der AMA (einschließlich Vordienstzeiten in den Vorgängerorganisationen) </P></TD><TD><P>Volles Entgelt für </P></TD><TD><P>Halbes Entgelt für</P></TD></TR><TR><TD><P>bis 5 Jahre </P></TD><TD><P>45 Kalendertage </P></TD><TD><P>30 Kalendertage</P></TD></TR><TR><TD><P>bis 15 Jahre </P></TD><TD><P>60 Kalendertage </P></TD><TD><P>30 Kalendertage</P></TD></TR><TR><TD><P>bis 25 Jahre </P></TD><TD><P>105 Kalendertage </P></TD><TD><P>30 Kalendertage</P></TD></TR><TR><TD><P>über 25 Jahre </P></TD><TD><P>150 Kalendertage </P></TD><TD><P>30 Kalendertage</P></TD></TR></TABLE><P>Ist die Erkrankung Folge eines Arbeitsunfalles, gebührt volles Entgelt schon bei einer Dienstzeit unter 5 Jahren für 60 Kalendertage.</P><P /><P>5)&nbsp;&nbsp;Tritt innerhalb eines halben Jahres nach Wiederaufnahme der Arbeit abermals eine Dienstverhinderung wegen Krankheit ein, besteht nur Anspruch auf die Hälfte der unter 4) angeführten Entgelte, wenn die Gesamtdauer der Dienstverhinderung die unter 4) bezeichneten Zeiträume übersteigt.</P>";
 
             this.htmlEditor.HiddenButtons = "tsbPrint; tsbPrintPreview; tsbElementProperties";
             this.htmlEditor.CodeEditor.WordWrap = true;
@@ -54,5 +51,61 @@ namespace Editor_WPF6
             var Element = this.htmlEditor.SurroundSelectionWithElementType("del");
             if (Element != null) Element.Style = "color: red";
         }
+
+        private string css = @"
+body
+{
+    font-family: Arial;
+    font-size: 14px;
+}
+
+h3
+{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+p
+{
+    font-family: Arial;
+    font-size: 14px;
+}
+
+del
+{
+    font-family: Arial;
+    color: red;
+    font-size: 14px;
+}
+
+ins {
+    font-family: Arial;
+    color: blue;
+    font-size: 14px;
+}
+
+
+table, td, th
+{
+    font-family: Arial;
+    font-size: 14px;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th
+{
+    font-weight: bold;
+}
+ 
+
+td p
+{
+    margin: 0;
+}
+
+";
     }
+
 }
