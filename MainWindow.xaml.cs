@@ -90,8 +90,8 @@ table, td, th
 {
     font-family: Arial;
     font-size: 14px;
-    border-collapse: collapse;
-    border: 1px solid black;
+    border-collapse: collapse !important;
+    border: 1px solid black !important;
 }
 
 th
